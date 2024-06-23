@@ -1,0 +1,44 @@
+body {
+  /* width: 98vw;
+  height: 98vh; */
+  color: antiquewhite;
+  font-family: Calibri, 'Trebuchet MS', 'Gill Sans MT';
+  background-color: #111;
+}
+
+.box {
+  /* display: flex; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1550px;
+  height: 900px;
+  line-height: 720px;
+  transform: translate(-50%, -50%);
+  /* border-radius: 80px; */
+  font-size: 650px;
+  /* background-color: #333; */
+}
+
+.time {
+  display: flex;
+  justify-content: space-between;
+}
+
+.time>.time-chi {
+  width: 700px;
+  height: 700px;
+  border-radius: 4.5625rem;
+  text-align: center;
+  background-color: #333;
+
+}
+.time>.time-chi .hour,
+.time>.time-chi .minute{
+  line-height: 700px;
+}
+
+.date {
+  font-size: 100px;
+  line-height:180px;
+}
