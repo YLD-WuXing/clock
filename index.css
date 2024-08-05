@@ -7,38 +7,84 @@ body {
 }
 
 .box {
-  /* display: flex; */
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 1550px;
-  height: 900px;
-  line-height: 720px;
+  width: 80vw;
+  height: 80vh;
   transform: translate(-50%, -50%);
   /* border-radius: 80px; */
-  font-size: 650px;
+  font-size: 16vh;
   /* background-color: #333; */
 }
 
 .time {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 4fr 1fr;
+  grid-column-gap: 5vw;
+  height: 100%;
+  width: 100%;
+  font-size: 30vw;
+  text-align: center;
 }
 
+
 .time>.time-chi {
-  width: 700px;
-  height: 700px;
-  border-radius: 4.5625rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3vw;
   text-align: center;
   background-color: #333;
 
 }
-.time>.time-chi .hour,
-.time>.time-chi .minute{
-  line-height: 700px;
-}
 
 .date {
-  font-size: 100px;
-  line-height:180px;
+  font-size: 6vw;
+  /* line-height: 180px; */
+}
+
+/* 纵屏模式 */
+@media (max-aspect-ratio: 2/3) {
+  .box {
+    height: 90vh;
+    /* font-size: 72vw; */
+  }
+
+  .time {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 10fr 10fr 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 2vh;
+    font-size: 30vh;
+  }
+
+  .time-chi {
+    grid-column-start: span 2;
+  }
+
+  .date {
+    font-size: 3vh;
+  }
+}
+
+/* 纵屏模式并且宽高比 */
+@media (min-aspect-ratio: 2/3) and (max-aspect-ratio: 9/10) {
+  .box{
+    height: 90vh;
+    width: 70vw;
+  }
+  .time {
+    grid-template-rows: 10fr 10fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 3vh;
+    border-radius: 5vh;
+    font-size: 32vh;
+  }
+
+  .time-chi {
+    grid-column-start: span 2;
+  }
 }
