@@ -61,7 +61,7 @@ body {
     font-size: 30vh;
   }
 
-  .time  .time-chi {
+  .time .time-chi {
     grid-column-start: span 2;
     border-radius: 5vh;
   }
@@ -84,7 +84,7 @@ body {
     font-size: 32vh;
   }
 
-  .time  .time-chi {
+  .time .time-chi {
     grid-column-start: span 2;
     border-radius: 5vh;
   }
